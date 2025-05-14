@@ -12,5 +12,5 @@ variable "region" {
 variable "bucket_name" {
   description = "Name of the GCS bucket"
   type        = string
-  default     = "spacelift-demo-bucket-unique"
+  default     = "spacelift-demo-bucket-${random_id.bucket_suffix.hex}"
 }
