@@ -1,7 +1,3 @@
-output "kubeconfig_path" {
-  value = local_file.kubeconfig.filename
-}
-
-output "registry_container_name" {
-  value = docker_container.registry.name
+output "bucket_url" {
+  value = "gs://${google_storage_bucket.demo_bucket.name}"
 }
